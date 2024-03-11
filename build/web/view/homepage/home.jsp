@@ -31,10 +31,9 @@
         <!-- owl.carousel css -->
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/owl.carousel.css">
         <!-- font-awesome css -->
-<!--        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/font-awesome.min.css">-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"
-        integrity="sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+              integrity="sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" 
+              crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- flexslider.css-->
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/flexslider.css">
         <!-- chosen.min.css-->
@@ -81,7 +80,7 @@
                                 <div class="left-menu mb-30">
                                     <ul>
                                     <c:forEach items="${listCategory}" var="cate">
-                                        <li><a href="#">${cate.name}</a></li>
+                                        <li><a href="home?search=category&categoryId=${cate.id}">${cate.name}</a></li>
                                         </c:forEach>
                                 </ul>
                             </div>
@@ -335,7 +334,7 @@
                                             <!-- single-product-start -->
                                             <div class="product-wrapper mb-40">
                                                 <div class="product-img">
-                                                    <a href="#">
+                                                    <a href="product-details?id=${p.id}">   
                                                         <img src="${pageContext.request.contextPath}/img/product/1.jpg" alt="book" class="primary" />
                                                     </a>
                                                     <div class="quick-view">
@@ -377,11 +376,10 @@
                             </div>
                             <div class="page-number">
                                 <ul>
-                                    <li><a href="#" class="active">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#" class="angle"><i class="fa fa-angle-right"></i></a></li>
+                                    <c:forEach begin="1" end="${pageControl.totalPage}" var="pageNumber">
+                                        <li><a href="${pageControl.urlPattern}page=${pageNumber}">${pageNumber}</a></li>
+                                    </c:forEach>
+                                        <li><a href="#" class="angle"><i class="fa fa-angle-right"></i></a></li>
                                 </ul>
                             </div>
                         </div>
