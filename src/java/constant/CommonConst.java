@@ -9,5 +9,8 @@ package constant;
  * @author Acer
  */
 public class CommonConst {
-    public static final int RECORD_PER_PAGE = 8;
+    public static final int RECORD_PER_PAGE = 16;
+    
+    public static final String SESSION_PRODUCT = "listProduct";
+    public static final String SESSION_CATEGORY = "listCategory";
 }

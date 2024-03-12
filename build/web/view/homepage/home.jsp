@@ -55,15 +55,15 @@
             <jsp:include page="../common/header-mid-area.jsp"></jsp:include>
                 <!-- header-mid-area-end -->
                 <!-- main-menu-area-start -->
-            <jsp:include page="../common/main-menu-area.jsp"></jsp:include>
+
                 <!-- main-menu-area-end -->
-                <!-- mobile-menu-area-start -->
-            <jsp:include page="../common/mobile-menu-area.jsp"></jsp:include>
+                <!-- mobile-menu-area-start --> 
+
                 <!-- mobile-menu-area-end -->
             </header>
             <!-- header-area-end -->
             <!-- breadcrumbs-area-start -->
-        <jsp:include page="../common/breadcrumbs-area.jsp"></jsp:include>
+
             <!-- breadcrumbs-area-end -->
             <!-- shop-main-area-start -->
             <div class="shop-main-area mb-70">
@@ -84,247 +84,15 @@
                                         </c:forEach>
                                 </ul>
                             </div>
-                            <div class="left-title mb-20">
-                                <h4>Color</h4>
-                            </div>
-                            <div class="color-menu mb-30">
-                                <ul class="color">
-                                    <li><a href="#"></a></li>
-                                    <li><a href="#" class="bg-2"></a></li>
-                                    <li><a href="#" class="bg-3"></a></li>
-                                    <li><a href="#" class="bg-4"></a></li>
-                                </ul>
-                            </div>
-                            <div class="left-title mb-20">
-                                <h4>Manufacturer</h4>
-                            </div>
-                            <div class="left-menu mb-30">
-                                <ul>
-                                    <li><a href="#">Adidas<span>(4)</span></a></li>
-                                    <li><a href="#">Chanel<span>(7)</span></a></li>
-                                    <li><a href="#">DKNY <span>(3)</span></a></li>
-                                    <li><a href="#">Dolce<span>(3)</span></a></li>
-                                    <li><a href="#">Gabbana<span>(2)</span></a></li>
-                                    <li><a href="#">Nike<span>(3)</span></a></li>
-                                    <li><a href="#">Other <span>(1)</span></a></li>
-                                </ul>
-                            </div>
-                            <div class="left-title mb-20">
-                                <h4>Price</h4>
-                            </div>
-                            <div class="left-menu mb-30">
-                                <ul>
-                                    <li><a href="#">$0.00-$9.99<span>(1)</span></a></li>
-                                    <li><a href="#">$30.00-$39.99<span>(11)</span></a></li>
-                                    <li><a href="#">$40.00-$49.99<span>(2)</span></a></li>
-                                    <li><a href="#">$50.00-$59.99<span>(3)</span></a></li>
-                                    <li><a href="#">$70.00-and above<span>(1)</span></a></li>
-                                </ul>
-                            </div>
-                            <div class="left-title mb-20">
-                                <h4>Random</h4>
-                            </div>
-                            <div class="random-area mb-30">
-                                <div class="product-active-2 owl-carousel">
-                                    <div class="product-total-2">
-                                        <div class="single-most-product bd mb-18">
-                                            <div class="most-product-img">
-                                                <a href="#"><img src="${pageContext.request.contextPath}/img/product/20.jpg" alt="book" /></a>
-                                            </div>
-                                            <div class="most-product-content">
-                                                <div class="product-rating">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                                <h4><a href="#">Endeavor Daytrip</a></h4>
-                                                <div class="product-price">
-                                                    <ul>
-                                                        <li>$30.00</li>
-                                                        <li class="old-price">$33.00</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="single-most-product bd mb-18">
-                                            <div class="most-product-img">
-                                                <a href="#"><img src="${pageContext.request.contextPath}/img/product/21.jpg" alt="book" /></a>
-                                            </div>
-                                            <div class="most-product-content">
-                                                <div class="product-rating">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                                <h4><a href="#">Savvy Shoulder Tote</a></h4>
-                                                <div class="product-price">
-                                                    <ul>
-                                                        <li>$30.00</li>
-                                                        <li class="old-price">$35.00</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="single-most-product">
-                                            <div class="most-product-img">
-                                                <a href="#"><img src="${pageContext.request.contextPath}/img/product/22.jpg" alt="book" /></a>
-                                            </div>
-                                            <div class="most-product-content">
-                                                <div class="product-rating">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                                <h4><a href="#">Compete Track Tote</a></h4>
-                                                <div class="product-price">
-                                                    <ul>
-                                                        <li>$35.00</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-total-2">
-                                        <div class="single-most-product bd mb-18">
-                                            <div class="most-product-img">
-                                                <a href="#"><img src="${pageContext.request.contextPath}/img/product/23.jpg" alt="book" /></a>
-                                            </div>
-                                            <div class="most-product-content">
-                                                <div class="product-rating">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                                <h4><a href="#">Voyage Yoga Bag</a></h4>
-                                                <div class="product-price">
-                                                    <ul>
-                                                        <li>$30.00</li>
-                                                        <li class="old-price">$33.00</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="single-most-product bd mb-18">
-                                            <div class="most-product-img">
-                                                <a href="#"><img src="${pageContext.request.contextPath}/img/product/24.jpg" alt="book" /></a>
-                                            </div>
-                                            <div class="most-product-content">
-                                                <div class="product-rating">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                                <h4><a href="#">Impulse Duffle</a></h4>
-                                                <div class="product-price">
-                                                    <ul>
-                                                        <li>$70.00</li>
-                                                        <li class="old-price">$74.00</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="single-most-product">
-                                            <div class="most-product-img">
-                                                <a href="#"><img src="${pageContext.request.contextPath}/img/product/22.jpg" alt="book" /></a>
-                                            </div>
-                                            <div class="most-product-content">
-                                                <div class="product-rating">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                                <h4><a href="#">Fusion Backpack</a></h4>
-                                                <div class="product-price">
-                                                    <ul>
-                                                        <li>$59.00</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="banner-area mb-30">
-                                <div class="banner-img-2">
-                                    <a href="#"><img src="${pageContext.request.contextPath}/img/banner/31.jpg" alt="banner" /></a>
-                                </div>
-                            </div>
-                            <div class="left-title-2 mb-30">
-                                <h2>Compare Products</h2>
-                                <p>You have no items to compare.</p>
-                            </div>
-                            <div class="left-title-2">
-                                <h2>My Wish List</h2>
-                                <p>You have no items in your wish list.</p>
-                            </div>
+
                         </div>
                     </div>
                     <div class="col-lg-9 col-md-12 col-12 order-lg-2 order-1">
-                        <div class="category-image mb-30">
-                            <a href="#"><img src="${pageContext.request.contextPath}/img/banner/32.jpg" alt="banner" /></a>
-                        </div>
+
                         <div class="section-title-5 mb-30">
-                            <h2>Book</h2>
+                            <h2>PC Parts</h2>
                         </div>
-                        <div class="toolbar mb-30">
-                            <div class="shop-tab">
-                                <div class="tab-3">
-                                    <ul class="nav">
-                                        <li><a class="active" href="#th" data-bs-toggle="tab"><i class="fa fa-th-large"></i>Grid</a></li>
-                                        <li><a href="#list" data-bs-toggle="tab"><i class="fa fa-bars"></i>List</a></li>
-                                    </ul>
-                                </div>
-                                <div class="list-page">
-                                    <p>Items 1-9 of 11</p>
-                                </div>
-                            </div>
-                            <div class="field-limiter">
-                                <div class="control">
-                                    <span>Show</span>
-                                    <!-- chosen-start -->
-                                    <select data-placeholder="Default Sorting" style="width:50px;" class="chosen-select" tabindex="1">
-                                        <option value="Sorting">1</option>
-                                        <option value="popularity">2</option>
-                                        <option value="rating">3</option>
-                                        <option value="date">4</option>
-                                    </select>
-                                    <!-- chosen-end -->
-                                </div>
-                            </div>
-                            <div class="toolbar-sorter">
-                                <span>Sort By</span>
-                                <select id="sorter" class="sorter-options" data-role="sorter">
-                                    <option selected="selected" value="position"> Position </option>
-                                    <option value="name"> Product Name </option>
-                                    <option value="price"> Price </option>
-                                </select>
-                                <a href="#"><i class="fa fa-arrow-up"></i></a>
-                            </div>
-                        </div>
+
                         <!-- tab-area-start -->
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="th">
@@ -335,13 +103,9 @@
                                             <div class="product-wrapper mb-40">
                                                 <div class="product-img">
                                                     <a href="product-details?id=${p.id}">   
-                                                        <img src="${pageContext.request.contextPath}/img/product/1.jpg" alt="book" class="primary" />
+                                                        <img src="${pageContext.request.contextPath}/img/product/40.jpg" alt="book" class="primary" />
                                                     </a>
-                                                    <div class="quick-view">
-                                                        <a class="action-view" href="#" data-bs-target="#productModal" data-bs-toggle="modal" title="Quick View">
-                                                            <i class="fa fa-search-plus"></i>
-                                                        </a>
-                                                    </div>
+                                                    
                                                 </div>
                                                 <div class="product-details text-center">
                                                     <h4><a href="#">${p.name}</a></h4>
@@ -371,15 +135,13 @@
                         <!-- tab-area-end -->
                         <!-- pagination-area-start -->
                         <div class="pagination-area mt-50">
-                            <div class="list-page-2">
-                                <p>Items 1-9 of 11</p>
-                            </div>
+                            
                             <div class="page-number">
                                 <ul>
                                     <c:forEach begin="1" end="${pageControl.totalPage}" var="pageNumber">
                                         <li><a href="${pageControl.urlPattern}page=${pageNumber}">${pageNumber}</a></li>
-                                    </c:forEach>
-                                        <li><a href="#" class="angle"><i class="fa fa-angle-right"></i></a></li>
+                                        </c:forEach>
+                                    <li><a href="#" class="angle"><i class="fa fa-angle-right"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -425,40 +187,40 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-7 col-sm-7 col-xs-12">
-                                <div class="modal-pro-content">
-                                    <h3>Chaz Kangeroo Hoodie3</h3>
-                                    <div class="price">
-                                        <span>$70.00</span>
-                                    </div>
-                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet.</p>
-                                    <div class="quick-view-select">
-                                        <div class="select-option-part">
-                                            <label>Size*</label>
-                                            <select class="select">
-                                                <option value="">S</option>
-                                                <option value="">M</option>
-                                                <option value="">L</option>
-                                            </select>
-                                        </div>
-                                        <div class="quickview-color-wrap">
-                                            <label>Color*</label>
-                                            <div class="quickview-color">
-                                                <ul>
-                                                    <li class="blue">b</li>
-                                                    <li class="red">r</li>
-                                                    <li class="pink">p</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <form action="#">
-                                        <input type="number" value="1" />
-                                        <button>Add to cart</button>
-                                    </form>
-                                    <span><i class="fa fa-check"></i> In stock</span>
-                                </div>
-                            </div>
+                            <!--                            <div class="col-md-7 col-sm-7 col-xs-12">
+                                                            <div class="modal-pro-content">
+                                                                <h3>Chaz Kangeroo Hoodie3</h3>
+                                                                <div class="price">
+                                                                    <span>$70.00</span>
+                                                                </div>
+                                                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet.</p>
+                                                                <div class="quick-view-select">
+                                                                    <div class="select-option-part">
+                                                                        <label>Size*</label>
+                                                                        <select class="select">
+                                                                            <option value="">S</option>
+                                                                            <option value="">M</option>
+                                                                            <option value="">L</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="quickview-color-wrap">
+                                                                        <label>Color*</label>
+                                                                        <div class="quickview-color">
+                                                                            <ul>
+                                                                                <li class="blue">b</li>
+                                                                                <li class="red">r</li>
+                                                                                <li class="pink">p</li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <form action="#">
+                                                                    <input type="number" value="1" />
+                                                                    <button>Add to cart</button>
+                                                                </form>
+                                                                <span><i class="fa fa-check"></i> In stock</span>
+                                                            </div>
+                                                        </div>-->
                         </div>
                     </div>
                 </div>
@@ -500,7 +262,7 @@
         <!-- plugins js -->
         <script src="${pageContext.request.contextPath}/js/plugins.js"></script>
         <!-- main js -->
-        <script src="${pageContext.request.contextPath}/js/main.js"></script>
+        <script src="${pageContext.request.contextPath}/js/main .js"></script>
     </body>
 
 
