@@ -14,7 +14,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Koparion – Book Shop HTML5 Template</title>
+        <title>PC Parts Store</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -103,12 +103,12 @@
                                             <div class="product-wrapper mb-40">
                                                 <div class="product-img">
                                                     <a href="product-details?id=${p.id}">   
-                                                        <img src="${pageContext.request.contextPath}/img/product/40.jpg" alt="book" class="primary" />
+                                                        <img src="${p.image}"/>
                                                     </a>
-                                                    
+
                                                 </div>
                                                 <div class="product-details text-center">
-                                                    <h4><a href="#">${p.name}</a></h4>
+                                                    <h4><a href="product-details?id=${p.id}">${p.name}</a></h4>
                                                     <div class="product-price">
                                                         <ul>
                                                             <li>$ ${p.price}</li>
@@ -135,7 +135,7 @@
                         <!-- tab-area-end -->
                         <!-- pagination-area-start -->
                         <div class="pagination-area mt-50">
-                            
+
                             <div class="page-number">
                                 <ul>
                                     <c:forEach begin="1" end="${pageControl.totalPage}" var="pageNumber">
@@ -187,40 +187,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--                            <div class="col-md-7 col-sm-7 col-xs-12">
-                                                            <div class="modal-pro-content">
-                                                                <h3>Chaz Kangeroo Hoodie3</h3>
-                                                                <div class="price">
-                                                                    <span>$70.00</span>
-                                                                </div>
-                                                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet.</p>
-                                                                <div class="quick-view-select">
-                                                                    <div class="select-option-part">
-                                                                        <label>Size*</label>
-                                                                        <select class="select">
-                                                                            <option value="">S</option>
-                                                                            <option value="">M</option>
-                                                                            <option value="">L</option>
-                                                                        </select>
-                                                                    </div>
-                                                                    <div class="quickview-color-wrap">
-                                                                        <label>Color*</label>
-                                                                        <div class="quickview-color">
-                                                                            <ul>
-                                                                                <li class="blue">b</li>
-                                                                                <li class="red">r</li>
-                                                                                <li class="pink">p</li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <form action="#">
-                                                                    <input type="number" value="1" />
-                                                                    <button>Add to cart</button>
-                                                                </form>
-                                                                <span><i class="fa fa-check"></i> In stock</span>
-                                                            </div>
-                                                        </div>-->
+
                         </div>
                     </div>
                 </div>

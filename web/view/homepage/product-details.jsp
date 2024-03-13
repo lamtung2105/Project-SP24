@@ -78,7 +78,7 @@
                                     <div class="col-lg-5 col-md-6 col-12">
                                         <div class="flexslider">
                                             <ul class="slides">                                                
-                                                <img src="${pageContext.request.contextPath}/img/flex/40.jpg" alt="woman" />                                            
+                                                <img src="${product.image}"/>                                            
                                         </ul>
                                     </div>
                                 </div>
