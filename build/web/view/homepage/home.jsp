@@ -1,8 +1,7 @@
 <%-- 
-    Document   : home
-    Created on : Mar 6, 2024, 10:47:43 PM
     Author     : Acer
 --%>
+
 
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>

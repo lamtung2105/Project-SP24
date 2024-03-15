@@ -15,7 +15,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>SB Admin - Dashboard</title>
+        <title>Super Admin</title>
 
         <!-- Custom fonts for this template-->
         <link href="${pageContext.request.contextPath}/vendor-admin/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -54,7 +54,7 @@
                     <jsp:include page="../admin/breadcrumbs.jsp"></jsp:include>
 
                         <!-- Icon Cards-->
-                    <jsp:include page="../admin/iconCard.jsp"></jsp:include>
+
 
 
 

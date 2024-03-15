@@ -70,8 +70,10 @@ public class ProductAdminServlet extends HttpServlet {
                 break;
             case "delete":
                 deleteProduct(request);
+                break;
             case "edit":
                 editProduct(request);
+                break;
             default:
 
         }
@@ -166,7 +168,7 @@ public class ProductAdminServlet extends HttpServlet {
                 // duong dan luu anh
                 String path = request.getServletContext().getRealPath("/images");
                 File dir = new File(path);
-                // xem duongd an nay ton tai chua
+                // xem duong dan nay ton tai chua
                 if (!dir.exists()) {
                     dir.mkdirs();
                 }
@@ -179,18 +181,18 @@ public class ProductAdminServlet extends HttpServlet {
             }
 
             Product product = Product.builder()
-                                .id(id)
-                                .name(name)
-                                .quantity(quantity)
-                                .price(price)
-                                .description(description)
-                                .categoryId(categoryId)
-                                .image(imagePath)
-                                .build();
+                    .id(id)
+                    .name(name)
+                    .quantity(quantity)
+                    .price(price)
+                    .description(description)
+                    .categoryId(categoryId)
+                    .image(imagePath)
+                    .build();
             pDAO.update(product);
         } catch (NumberFormatException | IOException | ServletException ex) {
             ex.printStackTrace();
-        } 
+        }
     }
 
 }
