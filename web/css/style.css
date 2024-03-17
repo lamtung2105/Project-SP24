@@ -7,43 +7,43 @@
     
     CSS INDEX
     ===================
-	
+        
     1. Template Default CSS (body, link color, section etc)
-	2. Header-area
-		2.1 Header top area
-		2.2 Header mid area
-		2.3 Main menu area
-	3. Banner area
-	4. Slider area
-	5. Product area
-	6. Bestseller area
-	7. Banner static area
-	8. Most product area
-	9. Testimonial area
-	10. Recent post area
-	11. Social group area
-	12. Footer
-		12.1  Footer top
-		12.2  Footer mid
-		12.3  Footer bottom
-	13. Home 2
-	14. Home 3
-	15. Home 4
-	16. Home 5
-	17. Home 6
-	18. Shop page
-	19. Product details
-	20. Blog page
-	21. Blog details
-	22. Login
-	23. Register
-	24. Contact
-	25. About
-	26. Cart
-	27. Checkout
-	28. Wishlist
-	29. 404 page
-	
+        2. Header-area
+                2.1 Header top area
+                2.2 Header mid area
+                2.3 Main menu area
+        3. Banner area
+        4. Slider area
+        5. Product area
+        6. Bestseller area
+        7. Banner static area
+        8. Most product area
+        9. Testimonial area
+        10. Recent post area
+        11. Social group area
+        12. Footer
+                12.1  Footer top
+                12.2  Footer mid
+                12.3  Footer bottom
+        13. Home 2
+        14. Home 3
+        15. Home 4
+        16. Home 5
+        17. Home 6
+        18. Shop page
+        19. Product details
+        20. Blog page
+        21. Blog details
+        22. Login
+        23. Register
+        24. Contact
+        25. About
+        26. Cart
+        27. Checkout
+        28. Wishlist
+        29. 404 page
+        
 
 -----------------------------------------------------------------------------------*/
 
@@ -1103,7 +1103,8 @@ body {
     margin-top: 4px;
 }
 
-.single-banner .banner-text {}
+.single-banner .banner-text {
+}
 
 .single-banner .banner-text h4 {
     color: #222;
@@ -1468,6 +1469,7 @@ body {
 .product-wrapper {
     position: relative;
     overflow: hidden;
+    display: flex;
 }
 
 .product-img,
@@ -5787,7 +5789,8 @@ nav.menu .cr-dropdown ul {
     overflow: hidden;
 }
 
-.single-register form {}
+.single-register form {
+}
 
 .single-register form label,
 .single-register label {

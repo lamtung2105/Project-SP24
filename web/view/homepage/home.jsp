@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
-    <!-- Mirrored from htmldemo.net/koparion/koparion/shop.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Feb 2024 17:30:51 GMT -->
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -102,7 +102,7 @@
                                             <div class="product-wrapper mb-40">
                                                 <div class="product-img">
                                                     <a href="product-details?id=${p.id}">   
-                                                        <img src="${p.image}"/>
+                                                        <img src="${pageContext.request.contextPath}/img/flex/40.jpg" alt="" />
                                                     </a>
 
                                                 </div>
@@ -230,7 +230,4 @@
         <!-- main js -->
         <script src="${pageContext.request.contextPath}/js/main .js"></script>
     </body>
-
-
-    <!-- Mirrored from htmldemo.net/koparion/koparion/shop.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Feb 2024 17:30:52 GMT -->
 </html>

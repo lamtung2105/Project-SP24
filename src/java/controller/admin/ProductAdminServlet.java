@@ -8,7 +8,6 @@ import dal.implement.CategoryDAO;
 import dal.implement.ProductDAO;
 import entity.Product;
 import java.io.IOException;
-import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.http.HttpServlet;
