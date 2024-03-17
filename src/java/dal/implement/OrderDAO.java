@@ -6,6 +6,7 @@ package dal.implement;
 
 import dal.GenericDAO;
 import entity.Order;
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 
@@ -36,6 +37,13 @@ public class OrderDAO extends GenericDAO<Order> {
         parameterMap.put("3", t.getCreateAt());
         return insertGenericDAO(sql, parameterMap);
 
+    }
+
+    public List<Order> findPaidOrdersByAccountId(int accountId) {
+        String sql = "SELECT * FROM [dbo].[Order] WHERE [accountId] = ?";
+        parameterMap = new LinkedHashMap<>();
+        parameterMap.put("accountId", accountId);
+        return queryGenericDAO(Order.class, sql, parameterMap);
     }
 
 }

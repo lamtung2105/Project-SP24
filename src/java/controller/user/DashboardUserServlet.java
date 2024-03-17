@@ -7,6 +7,7 @@ package controller.user;
 import constant.CommonConst;
 import dal.implement.OrderDAO;
 import dal.implement.OrderDetailsDAO;
+import entity.Account;
 import entity.Order;
 import entity.OrderDetails;
 import java.io.IOException;
@@ -16,6 +17,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -39,12 +41,23 @@ public class DashboardUserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession();
-        //get list order va order details
-        List<Order> listOrder = dao.findAll();
-        List<OrderDetails> listOrderDetails = odDao.findAll();
-        session.setAttribute(CommonConst.SESSION_ORDER, listOrder);
-        session.setAttribute(CommonConst.SESSION_ORDER_DETAILS, listOrderDetails);
-        //chuyen sang dashboard
+        // Lấy accountId từ session
+        int accountId = ((Account) session.getAttribute(CommonConst.SESSION_ACCOUNT)).getId();
+
+        // Tìm danh sách đơn hàng đã thanh toán của tài khoản
+        List<Order> paidOrders = dao.findPaidOrdersByAccountId(accountId);
+        // Lấy danh sách chi tiết đơn hàng của các đơn hàng đã thanh toán
+        List<OrderDetails> orderDetails = new ArrayList<>();
+        for (Order order : paidOrders) {
+            List<OrderDetails> details = odDao.findByOrderId(order.getId());
+            orderDetails.addAll(details);
+        }
+
+        // Lưu danh sách đơn hàng và chi tiết đơn hàng vào session
+        session.setAttribute(CommonConst.SESSION_ORDER, paidOrders);
+        session.setAttribute(CommonConst.SESSION_ORDER_DETAILS, orderDetails);
+
+        // Chuyển hướng sang trang dashboard
         request.getRequestDispatcher("view/user/dashboard.jsp").forward(request, response);
     }
 

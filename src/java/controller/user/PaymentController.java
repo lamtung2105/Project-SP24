@@ -50,30 +50,7 @@ public class PaymentController extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-//    @Override
-//    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-//            throws ServletException, IOException {
-//        String action = request.getParameter("action") == null
-//                ? ""
-//                : request.getParameter("action");
-//        switch (action) {
-//            case "add-product":
-//                addProduct(request, response);
-//                break;
-//            case "change-quantity":
-//                changeQuantity(request, response);
-//                break;
-//            case "delete":
-//                delete(request, response);
-//                break;
-//            case "check-out":
-//                checkOut(request, response);
-//                break;
-//            default:
-//                throw new AssertionError();
-//        }
-//        response.sendRedirect("payment");
-//    }
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -216,9 +193,9 @@ public class PaymentController extends HttpServlet {
         return amount;
     }
 
-    private float findPriceById(List<Product> list, int bookId) {
+    private float findPriceById(List<Product> list, int productId) {
         for (Product obj : list) {
-            if (obj.getId() == bookId) {
+            if (obj.getId() == productId) {
                 return obj.getPrice();
             }
         }

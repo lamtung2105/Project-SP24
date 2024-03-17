@@ -55,10 +55,10 @@
             <jsp:include page="../common/header-mid-area.jsp"></jsp:include>
                 <!-- header-mid-area-end -->
                 <!-- main-menu-area-start -->
-            <jsp:include page="../common/main-menu-area.jsp"></jsp:include>
+
                 <!-- main-menu-area-end -->
                 <!-- mobile-menu-area-start -->
-            <jsp:include page="../common/mobile-menu-area.jsp"></jsp:include>
+
                 <!-- mobile-menu-area-end -->
             </header>
             <!-- header-area-end -->

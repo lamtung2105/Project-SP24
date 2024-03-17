@@ -37,4 +37,11 @@ public class OrderDetailsDAO extends GenericDAO<OrderDetails> {
         return insertGenericDAO(sql, parameterMap);
     }
 
+    public List<OrderDetails> findByOrderId(int id) {
+        String sql = "SELECT * FROM [dbo].[OrderDetails] WHERE [orderId] = ?";
+        parameterMap = new LinkedHashMap<>();
+        parameterMap.put("orderId", id);
+        return queryGenericDAO(OrderDetails.class, sql, parameterMap);
+    }
+
 }
