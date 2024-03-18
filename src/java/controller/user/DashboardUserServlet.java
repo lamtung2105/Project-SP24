@@ -7,9 +7,11 @@ package controller.user;
 import constant.CommonConst;
 import dal.implement.OrderDAO;
 import dal.implement.OrderDetailsDAO;
+import dal.implement.ProductDAO;
 import entity.Account;
 import entity.Order;
 import entity.OrderDetails;
+import entity.Product;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -28,6 +30,7 @@ public class DashboardUserServlet extends HttpServlet {
 
     OrderDAO dao = new OrderDAO();
     OrderDetailsDAO odDao = new OrderDetailsDAO();
+    ProductDAO p = new ProductDAO();
 
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -53,9 +56,13 @@ public class DashboardUserServlet extends HttpServlet {
             orderDetails.addAll(details);
         }
 
-        // Lưu danh sách đơn hàng và chi tiết đơn hàng vào session
+        // Lấy danh sách sản phẩm
+        List<Product> products = p.getProductByOrderDetails(accountId);
+
+        // Lưu danh sách đơn hàng, chi tiết đơn hàng và sản phẩm vào session
         session.setAttribute(CommonConst.SESSION_ORDER, paidOrders);
         session.setAttribute(CommonConst.SESSION_ORDER_DETAILS, orderDetails);
+        session.setAttribute(CommonConst.SESSION_PRODUCT, products);
 
         // Chuyển hướng sang trang dashboard
         request.getRequestDispatcher("view/user/dashboard.jsp").forward(request, response);

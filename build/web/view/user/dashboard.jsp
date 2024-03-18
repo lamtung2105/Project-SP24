@@ -1,7 +1,3 @@
-<%-- 
-    Author     : Acer
---%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -64,7 +60,7 @@
                                         <thead>
                                             <tr>
                                                 <th>Order ID</th>
-                                                <th>Amount</th>
+                                                <th>Price</th>
                                                 <th>Create Date</th>
                                                 <th>Action</th>
                                             </tr>
@@ -73,7 +69,7 @@
                                         <c:forEach items="${listOrder}" var="order">
                                             <tr>
                                                 <td>${order.id}</td>
-                                                <td>${order.amount}</td>
+                                                <td>${order.amount}$</td>
                                                 <td>${order.createAt}</td>
                                                 <td><a href="#" data-toggle="modal" data-target="#orderDetailsModal_${order.id}">View Details</a></td>
                                             </tr>
@@ -83,17 +79,18 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Order Details Modal -->
-                    <c:forEach items="${listOrder}" var="order">
-                        <div class="modal fade" id="orderDetailsModal_${order.id}" tabindex="-1" role="dialog" aria-labelledby="orderDetailsModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-scrollable" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="orderDetailsModalLabel">Order Details - ${order.id}</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
+                <!-- Order Details Modal -->
+                <c:forEach items="${listOrder}" var="order">
+                    <div class="modal fade" id="orderDetailsModal_${order.id}" tabindex="-1" role="dialog" aria-labelledby="orderDetailsModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="orderDetailsModalLabel">Order Details - ${order.id}</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                 </div>
                                 <div class="modal-body">
                                     <table class="table">
@@ -111,54 +108,61 @@
                                                         <td>${detail.quantity}</td>
                                                     </tr>
                                                 </c:if>
-                                    </c:forEach>
+                                            </c:forEach>
                                         </tbody>
                                     </table>
+                                    <!-- Display products related to this order -->
+                                    <h5>Products related to user order:</h5>
+                                    <ul>
+                                        <c:forEach items="${listProduct}" var="product">
+                                            <li>
+                                                <p>Name: ${product.name}</p>
+                                                <p>Price: ${product.price}$</p> 
+                                            </li>
+                                        </c:forEach>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </c:forEach>
             </div>
-                                <!-- /.container-fluid -->
+            <!-- /.container-fluid -->
 
-                                <!-- Sticky Footer -->
-                                <jsp:include page="footer.jsp"></jsp:include>
+            <!-- Sticky Footer -->
+            <jsp:include page="footer.jsp"></jsp:include>
 
-                                </div>
-                                <!-- /.content-wrapper -->
+            </div>
+            <!-- /.content-wrapper -->
 
-                            </div>
-                            <!-- /#wrapper -->
+        </div>
+        <!-- /#wrapper -->
 
+        <!-- Logout Modal-->
+    <jsp:include page="logOutModal.jsp"></jsp:include>
 
-                            <!-- Logout Modal-->
-                        <jsp:include page="logOutModal.jsp"></jsp:include>
+        <!-- Bootstrap core JavaScript-->
+        <script src="${pageContext.request.contextPath}/vendor-admin/jquery/jquery.min.js"></script>
+    <script src="${pageContext.request.contextPath}/vendor-admin/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Core plugin JavaScript-->
+    <script src="${pageContext.request.contextPath}/vendor-admin/jquery-easing/jquery.easing.min.js"></script>
 
-                            <!-- Bootstrap core JavaScript-->
-                            <script src="${pageContext.request.contextPath}/vendor-admin/jquery/jquery.min.js"></script>
-                        <script src="${pageContext.request.contextPath}/vendor-admin/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="${pageContext.request.contextPath}/vendor-admin/datatables/jquery.dataTables.js"></script>
+    <script src="${pageContext.request.contextPath}/vendor-admin/datatables/dataTables.bootstrap4.js"></script>
 
-                        <!-- Core plugin JavaScript-->
-                        <script src="${pageContext.request.contextPath}/vendor-admin/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="${pageContext.request.contextPath}/js/admin/sb-admin.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/admin/colReorder-bootstrap4-min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/admin/colReorder-dataTables-min.js"></script>
 
-                        <!-- Page level plugin JavaScript-->
-                        <script src="${pageContext.request.contextPath}/vendor-admin/datatables/jquery.dataTables.js"></script>
-                        <script src="${pageContext.request.contextPath}/vendor-admin/datatables/dataTables.bootstrap4.js"></script>
+    <!-- Demo scripts for this page-->
+    <script src="${pageContext.request.contextPath}/js/admin/demo/datatables-demo.js"></script>
+    <script src="${pageContext.request.contextPath}/js/admin/demo/chart-area-demo.js"></script>
+    <script src="${pageContext.request.contextPath}/js/admin/colReorder-dataTables-min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/admin/colReorder-bootstrap4-min.js"></script>
 
-                        <!-- Custom scripts for all pages-->
-                        <script src="${pageContext.request.contextPath}/js/admin/sb-admin.min.js"></script>
-                        <script src="${pageContext.request.contextPath}/js/admin/colReorder-bootstrap4-min.js"></script>
-                        <script src="${pageContext.request.contextPath}/js/admin/colReorder-dataTables-min.js"></script>
+</body>
 
-                        <!-- Demo scripts for this page-->
-                        <script src="${pageContext.request.contextPath}/js/admin/demo/datatables-demo.js"></script>
-                        <script src="${pageContext.request.contextPath}/js/admin/demo/chart-area-demo.js"></script>
-                        <script src="${pageContext.request.contextPath}/js/admin/colReorder-dataTables-min.js"></script>
-                        <script src="${pageContext.request.contextPath}/js/admin/colReorder-bootstrap4-min.js"></script>
-
-
-                        </body>
-
-                        </html>
+</html>

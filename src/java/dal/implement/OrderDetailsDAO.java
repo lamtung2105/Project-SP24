@@ -6,6 +6,7 @@ package dal.implement;
 
 import dal.GenericDAO;
 import entity.OrderDetails;
+import entity.Product;
 import java.util.LinkedHashMap;
 import java.util.List;
 

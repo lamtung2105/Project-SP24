@@ -138,4 +138,15 @@ public class ProductDAO extends GenericDAO<Product> {
         updateGenericDAO(sql, parameterMap);
     }
 
+    public List<Product> getProductByOrderDetails(int accountId) {
+        String sql = "SELECT * \n"
+                + "                FROM Product p \n"
+                + "               JOIN OrderDetails od ON p.id = od.productId \n"
+                + "                JOIN [Order] o ON od.orderId = o.id \n"
+                + "                WHERE o.accountId = ?";
+        parameterMap = new LinkedHashMap<>();
+        parameterMap.put("accountId", accountId);
+        return queryGenericDAO(Product.class, sql, parameterMap);
+    }
+
 }
