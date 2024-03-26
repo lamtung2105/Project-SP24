@@ -60,7 +60,7 @@
                                         <thead>
                                             <tr>
                                                 <th>Order ID</th>
-                                                <th>Price</th>
+                                                <th>Total price</th>
                                                 <th>Create Date</th>
                                                 <th>Action</th>
                                             </tr>
@@ -97,6 +97,9 @@
                                         <thead>
                                             <tr>
                                                 <th>Product ID</th>
+                                                <th>Product Name</th>
+                                                <th>Product price</th>
+                                                <th>Product image</th>
                                                 <th>Quantity</th>
                                             </tr>
                                         </thead>
@@ -105,22 +108,23 @@
                                                 <c:if test="${detail.orderId == order.id}">
                                                     <tr>
                                                         <td>${detail.productId}</td>
+
+                                                        <c:forEach items="${listProduct}" var="product">
+                                                            <c:if test="${product.id == detail.productId}">
+                                                                <td>${product.name}</td>
+                                                                <td>${product.price}$</td>
+                                                                <td>
+                                                                    <img src="${product.image}" width="100" height="100" alt="alt"/>
+                                                                </td>
+                                                            </c:if>
+                                                        </c:forEach>
+
                                                         <td>${detail.quantity}</td>
                                                     </tr>
                                                 </c:if>
                                             </c:forEach>
                                         </tbody>
                                     </table>
-                                    <!-- Display products related to this order -->
-                                    <h5>Products related to user order:</h5>
-                                    <ul>
-                                        <c:forEach items="${listProduct}" var="product">
-                                            <li>
-                                                <p>Name: ${product.name}</p>
-                                                <p>Price: ${product.price}$</p> 
-                                            </li>
-                                        </c:forEach>
-                                    </ul>
                                 </div>
                             </div>
                         </div>

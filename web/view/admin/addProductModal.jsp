@@ -82,7 +82,6 @@
 <script>
     function validateForm() {
         let name = $('#nameInput').val();
-//        let author = $('#authorInput').val();
         let price = $('#priceInput').val();
         let quantity = $('#quantityInput').val();
 
@@ -92,10 +91,6 @@
         if (name === '') {
             $('#nameError').html('Tên không được để trống');
         }
-
-//        if (author === '') {
-//            $('#authorError').html('Tên tác giả không được để trống');
-//        }
 
         if (price === '') {
             $('#priceError').html('Giá của không được để trống');

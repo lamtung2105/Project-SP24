@@ -107,7 +107,7 @@
                                                 <div class="quality-button">
                                                     <input class="qty" type="number" name="quantity" value="1">
                                                 </div>
-                                                <a href="#" onclick="return this.closest('form').submit();">Add to cart</a>
+                                                <a href="#" class="fa fa-shopping-cart" onclick="return this.closest('form').submit();">Add to cart</a>
                                             </form>
                                         </div>
                                         <div class="product-social-links">

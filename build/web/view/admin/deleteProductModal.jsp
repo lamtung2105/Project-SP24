@@ -23,6 +23,8 @@
                     <div class="form-group" style="display: none">
                         <input type="text" class="form-control" id="idDeleteInput" name="id" value="">
                     </div>
+                    
+                    
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
                     <button type="submit" class="btn btn-danger">Có</button>
                 </form>

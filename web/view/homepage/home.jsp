@@ -115,12 +115,14 @@
                                                     </div>
                                                 </div>
                                                 <div class="product-link">
-                                                    <div class="product-button">
-                                                        <a href="#" title="Add to cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                                    </div>
+                                                    <form action="payment?action=add-product" method="POST">
+                                                        <div class="product-button">
+                                                            <a href="#" title="Add to cart" onclick="return this.closest('form').submit();"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                        </div>
+                                                    </form>
                                                     <div class="add-to-link">
                                                         <ul>
-                                                            <li><a href="product-details.html" title="Details"><i class="fa fa-external-link"></i></a></li>
+                                                            <li><a href="product-details?id=${p.id}" title="Details"><i class="fa fa-external-link"></i></a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
